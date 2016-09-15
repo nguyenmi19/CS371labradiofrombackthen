@@ -11,7 +11,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
+public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, View.OnLongClickListener {
 
     ToggleButton toggleButton;
     TextView stationDisplay;
@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     double rangeFM;
     int rangeAM;
 
-    int[] AM;
-    double[] FM;
+
+    int[] presetArrayAM = {550, 600, 650, 700, 750, 800};
+    double[] presetArrayFM = {90.9, 92.9, 94.9, 96.9, 98.9, 100.9};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,15 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
         rangeFM = 88.1;
         rangeAM = 530;
+
+        presetButton1.setOnLongClickListener(this);
+        presetButton2.setOnLongClickListener(this);
+        presetButton3.setOnLongClickListener(this);
+        presetButton4.setOnLongClickListener(this);
+        presetButton5.setOnLongClickListener(this);
+        presetButton6.setOnLongClickListener(this);
+
+
     }
 
 
@@ -113,9 +123,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     int stepAM = 10;
 
     public void onProgressChanged(SeekBar tuner, int progress, boolean fromUser) {
-
-
-
         String stringAMFM;
         if (stateAMFM)
         {
@@ -153,9 +160,119 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     public void onStopTrackingTouch(SeekBar seekBar) {
     }
 
-    
+    public void presetBtn1(View v) {
+        if (v.equals(presetButton1)) {
+            if (stateAMFM) {  //FM
+                rangeFM = presetArrayFM[0];
+                stationDisplay.setText(Double.toString(rangeFM) + "FM");
+            } else { //AM
+                rangeAM = presetArrayAM[0];
+                stationDisplay.setText(Double.toString(rangeAM) + "AM");
+            }
+        }
+    }
+    public void presetBtn2(View v) {
+        if (v.equals(presetButton2)) {
+            if (stateAMFM) {  //FM
+                rangeFM = presetArrayFM[1];
+                stationDisplay.setText(Double.toString(rangeFM) + "FM");
+            } else { //AM
+                rangeAM = presetArrayAM[1];
+                stationDisplay.setText(Double.toString(rangeAM) + "AM");
+            }
+        }
+    }
+    public void presetBtn3(View v) {
+        if (v.equals(presetButton3)) {
+            if (stateAMFM) {  //FM
+                rangeFM = presetArrayFM[2];
+                stationDisplay.setText(Double.toString(rangeFM) + "FM");
+            } else { //AM
+                rangeAM = presetArrayAM[2];
+                stationDisplay.setText(Double.toString(rangeAM) + "AM");
+            }
+        }
+    }
+    public void presetBtn4(View v) {
+        if (v.equals(presetButton4)) {
+            if (stateAMFM) {  //FM
+                rangeFM = presetArrayFM[3];
+                stationDisplay.setText(Double.toString(rangeFM) + "FM");
+            } else { //AM
+                rangeAM = presetArrayAM[3];
+                stationDisplay.setText(Double.toString(rangeAM) + "AM");
+            }
+        }
+    }
+    public void presetBtn5(View v) {
+        if (v.equals(presetButton5)) {
+            if (stateAMFM) {  //FM
+                rangeFM = presetArrayFM[4];
+                stationDisplay.setText(Double.toString(rangeFM) + "FM");
+            } else { //AM
+                rangeAM = presetArrayAM[4];
+                stationDisplay.setText(Double.toString(rangeAM) + "AM");
+            }
+        }
+    }
+    public void presetBtn6(View v) {
+        if (v.equals(presetButton6)) {
+            if (stateAMFM) {  //FM
+                rangeFM = presetArrayFM[5];
+                stationDisplay.setText(Double.toString(rangeFM) + "FM");
+            } else { //AM
+                rangeAM = presetArrayAM[5];
+                stationDisplay.setText(Double.toString(rangeAM) + "AM");
+            }
+        }
+    }
 
 
-
+    @Override
+    public boolean onLongClick(View v) {
+        if (v.equals(presetButton1)) {
+            if (stateAMFM) {  //FM
+                presetArrayFM[0] = rangeFM;
+            } else {  //AM
+                presetArrayAM[0] = rangeAM;
+            }
+        }
+        if (v.equals(presetButton2)) {
+            if (stateAMFM) {  //FM
+                presetArrayFM[1] = rangeFM;
+            } else {  //AM
+                presetArrayAM[1] = rangeAM;
+            }
+        }
+        if (v.equals(presetButton3)) {
+            if (stateAMFM) {  //FM
+                presetArrayFM[2] = rangeFM;
+            } else {  //AM
+                presetArrayAM[2] = rangeAM;
+            }
+        }
+        if (v.equals(presetButton4)) {
+            if (stateAMFM) {  //FM
+                presetArrayFM[3] = rangeFM;
+            } else {  //AM
+                presetArrayAM[3] = rangeAM;
+            }
+        }
+        if (v.equals(presetButton5)) {
+            if (stateAMFM) {  //FM
+                presetArrayFM[4] = rangeFM;
+            } else {  //AM
+                presetArrayAM[4] = rangeAM;
+            }
+        }
+        if (v.equals(presetButton6)) {
+            if (stateAMFM) {  //FM
+                presetArrayFM[5] = rangeFM;
+            } else {  //AM
+                presetArrayAM[5] = rangeAM;
+            }
+        }
+        return false;
+    }
 }
 

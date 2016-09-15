@@ -92,7 +92,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:id="@+id/button" />
+                android:id="@+id/button"
+                android:onClick="presetBtn1" />
 
             <Space
                 android:layout_width="20px"
@@ -103,7 +104,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
-                android:id="@+id/button2" />
+                android:id="@+id/button2"
+                android:onClick="presetBtn2" />
 
             <Space
                 android:layout_width="20px"
@@ -114,7 +116,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:id="@+id/button3" />
+                android:id="@+id/button3"
+                android:onClick="presetBtn3"/>
 
             <Space
                 android:layout_width="20px"
@@ -125,7 +128,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
-                android:id="@+id/button4" />
+                android:id="@+id/button4"
+                android:onClick="presetBtn4" />
 
             <Space
                 android:layout_width="20px"
@@ -136,7 +140,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
-                android:id="@+id/button5" />
+                android:id="@+id/button5"
+                android:onClick="presetBtn5"/>
 
             <Space
                 android:layout_width="20px"
@@ -147,7 +152,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6"
-                android:id="@+id/button6" />
+                android:id="@+id/button6"
+                android:onClick="presetBtn6"/>
 
             <Space
                 android:layout_width="20px"
