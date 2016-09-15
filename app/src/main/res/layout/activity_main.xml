@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginRight="255dp"
+    android:layout_marginEnd="0dp"
+    tools:context="carstero.cs371.carstereo.MainActivity"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:background="@color/abc_input_method_navigation_guard">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="buttonPower"
+                android:id="@+id/toggleButton"
+                android:textSize="50dp"
+                android:onClick="onClickBtn" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Station Display"
+                android:id="@+id/textView"
+                android:textSize="50dp"
+                android:textColor="#fefefe"
+                android:editable="true" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM / FM"
+                android:id="@+id/switch1"
+                android:textOff="AM"
+                android:textOn="FM"
+                android:textSize="50dp"
+                android:textColor="#ffffff"
+                android:onClick="AMFMbtn"/>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/button" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/button2" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/button3" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/button4" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/button5" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/button6" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/seekBar"
+            android:onClick="onProgressChanged"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:background="@color/background_material_dark"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause"
+                android:id="@+id/button7" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:id="@+id/button8" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eject"
+                android:id="@+id/button9" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forward"
+                android:id="@+id/button10" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat"
+                android:id="@+id/button11" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar2" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/abc_search_url_text_selected"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
